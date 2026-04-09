@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "course1" class = "org.example.beans.Course">
+        <property name = "name" value = "advance java"/>
+    </bean>
+
+
+    <bean id = "users1" class = "org.example.beans.Users">
+        <!--<property name = "message" value = "Hello User Message"/>-->
+        <property name = "course" ref="course1"/>
+    </bean>
+
+    <bean id = "brand1" class = "org.example.beans.Brand">
+    </bean>
+
+     <bean id="product1" class="org.example.beans.Product">
+         <constructor-arg index="0" value="1"/>
+         <constructor-arg index="1" value="tshirt"/>
+         <constructor-arg ref="brand1"/>
+    </bean>
+
+
+
+    <!--<bean id = "helloUserSingleton" class = "org.example.beans.Users" scope = "singleton">
+    </bean>
+
+    <bean id = "helloUserPrototype" class = "org.example.beans.Users" scope = "prototype">
+    </bean>-->
+
+
+</beans>
