@@ -9,7 +9,6 @@
         <property name = "name" value = "advance java"/>
     </bean>
 
-
     <bean id = "users1" class = "org.example.beans.Users">
         <!--<property name = "message" value = "Hello User Message"/>-->
         <property name = "course" ref="course1"/>
@@ -24,13 +23,26 @@
          <constructor-arg ref="brand1"/>
     </bean>
 
-
-
-    <!--<bean id = "helloUserSingleton" class = "org.example.beans.Users" scope = "singleton">
+     <!-- inheritance -->
+    <bean id = "parent" class = "org.example.beans.Parent">
+        <property name="name" value="rohit" />
+        <property name="surname" value="sharma" />
     </bean>
 
-    <bean id = "helloUserPrototype" class = "org.example.beans.Users" scope = "prototype">
-    </bean>-->
+
+    <bean id = "child" class = "org.example.beans.Child" parent="parent">
+        <property name="name" value="aman" />
+    </bean>
+
+    <bean id = "department1" class = "org.example.beans.Department">
+        <property name="deptName" value="sales"/>
+    </bean>
+
+    <bean id = "employee" class = "org.example.beans.Employee" autowire="constructor">
+    </bean>
+
+
+
 
 
 </beans>
