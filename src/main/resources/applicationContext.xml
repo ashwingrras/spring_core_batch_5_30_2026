@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <bean id = "course1" class = "org.example.beans.Course">
         <property name = "name" value = "advance java"/>
@@ -35,7 +34,7 @@
     </bean>
 
     <bean id = "department1" class = "org.example.beans.Department">
-        <property name="deptName" value="sales"/>
+        <property name="deptName" value="marketing"/>
     </bean>
 
     <bean id = "employee" class = "org.example.beans.Employee" autowire="constructor">
