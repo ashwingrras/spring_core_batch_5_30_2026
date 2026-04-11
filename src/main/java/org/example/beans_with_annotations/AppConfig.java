@@ -13,7 +13,6 @@ public class AppConfig
         return  new MyService();
     }
 
-
     @Bean
     public MyRepository myRepository()
     {
